@@ -1,0 +1,40 @@
+{
+  "name": "equity-valuation-model",
+  "version": "1.0.0",
+  "description": "股票估值模型命令行工具 - 12种投行级估值模型",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "evm": "dist/cli/index.js",
+    "equity-valuation": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/cli/index.ts",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "valuation",
+    "finance",
+    "dcf",
+    "lbo",
+    "stock",
+    "equity"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.5",
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "dotenv": "^17.3.1",
+    "yahoo-finance2": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
