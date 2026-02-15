@@ -32,6 +32,31 @@ npm link  # 全局安装 evm 命令
 
 ## 使用方法
 
+### 快速开始 - 智能估值脚本 (推荐)
+
+```bash
+# 运行智能估值脚本（自动检测行业）
+./smart-valuate.sh PLTR
+
+# 手动指定行业类型
+./smart-valuate.sh NVDA tech
+./smart-valuate.sh JPM bank
+```
+
+**支持的行业类型：**
+| 行业 | 说明 | 估值组合 |
+|------|------|----------|
+| `saas` | SaaS/软件 | FCF + 运营 + DCF + Comps + 敏感性分析 |
+| `tech` | 科技/AI/芯片 | FCF + DCF(高成长) + Comps + 敏感性 + LBO |
+| `bank` | 银行/金融 | Comps(P/B) + 信用分析 + 三报表 |
+| `auto` | 汽车/电动车 | FCF + DCF + Comps + LBO + 敏感性 |
+| `reit` | 房地产 | SOTP + Comps + 信用分析 |
+| `consumer` | 消费/零售 | FCF + DCF(稳定) + Comps |
+| `energy` | 能源/石油 | Comps + DCF(周期) + 敏感性 |
+| `conglomerate` | 多元化集团 | SOTP + DCF + Comps |
+
+### 单独使用各估值模型
+
 ```bash
 # 自由现金流分析
 evm fcf AAPL
